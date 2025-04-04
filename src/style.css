@@ -1,3 +1,7 @@
+/* ============================= */
+/*           GENERALES           */
+/* ============================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -60,6 +64,10 @@ body {
   height: 100vh;
   background-size: cover;
 }
+
+/* ============================= */
+/*             HOME              */
+/* ============================= */
 
 .contenido-bienvenida {
   color: #ffffff;
@@ -223,4 +231,64 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
+}
+
+/* ============================= */
+/*             MENU              */
+/* ============================= */
+
+.lista-platos-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+}
+
+.tarjeta-plato {
+  width: 220px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-plato img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.contenido-plato {
+  padding: 16px;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido-plato h3 {
+  margin-bottom: 8px;
+  color: #cf3a2c;
+}
+
+.contenido-plato p {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.contenido-plato a {
+  color: #cf3a2c;
+  text-decoration: none;
+  margin-top: auto;
+  text-align: right;
+  font-weight: bold;
+}
+
+.contenido-plato a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.1s ease-in-out;
 }
