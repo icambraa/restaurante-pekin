@@ -217,6 +217,36 @@ body {
   color: var(--color-principal);
 }
 
+.mantenimiento-js {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.boton-saber-mas {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.boton-saber-mas:hover {
+  background-color: var(--color-principal-oscuro);
+  transition: background-color 0.1s ease-in-out;
+}
+
+.texto-mantenimiento {
+  margin-top: 16px;
+  font-size: 16px;
+  color: var(--color-negro);
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .sobre-nosotros,
   .especialidad {
