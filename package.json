@@ -2,8 +2,8 @@
   "name": "restaurante-pekin",
   "version": "1.0.0",
   "scripts": {
-    "parcel:dev": "parcel src/index.html",
-    "parcel:build": "parcel build src/index.html",
+    "parcel:dev": "parcel src/html/index.html",
+    "parcel:build": "parcel build src/html/index.html",
     "clean": "rimraf dist .parcel-cache",
     "start": "npm-run-all clean parcel:dev",
     "build": "npm-run-all clean parcel:build"
