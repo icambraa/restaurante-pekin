@@ -170,14 +170,12 @@ body {
 
 .ubicacion h2 {
   font-size: 32px;
-  color: #333;
   margin-bottom: 24px;
 }
 
 .ubicacion p {
   font-size: 16px;
   margin-bottom: 19.2px;
-  color: #555;
 }
 
 .ubicacion p span {
@@ -291,4 +289,96 @@ body {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.1s ease-in-out;
+}
+
+/* ============================= */
+/*    DETALLES DE LOS PLATOS     */
+/* ============================= */
+
+.detalle-plato {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.imagen-detalle {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  object-fit: cover;
+}
+
+.texto-detalle {
+  color: #000000;
+  line-height: 1.9;
+  font-size: 16.8px;
+  padding: 0 8px;
+  max-width: 700px;
+}
+
+.texto-detalle p {
+  margin-bottom: 24px;
+}
+
+.texto-detalle strong {
+  color: #cf3a2c;
+  font-weight: bold;
+}
+
+.texto-detalle h3 {
+  color: #cf3a2c;
+  font-size: 28.8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.texto-detalle ul {
+  padding-left: 24px;
+  margin-bottom: 24px;
+}
+
+.texto-detalle ul li {
+  margin-bottom: 8px;
+}
+
+.imagenes-detalle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+.imagenes-detalle img {
+  width: 30%;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-detalle {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin-top: 24px;
+}
+
+.video-detalle iframe {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .imagenes-detalle {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagenes-detalle img {
+    width: 90%;
+    max-width: 400px;
+  }
 }
