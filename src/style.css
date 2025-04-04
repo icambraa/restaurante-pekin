@@ -1,5 +1,5 @@
 /* ============================= */
-/*            Variables            */
+/*           Variables           */
 /* ============================= */
 
 :root {
@@ -209,6 +209,12 @@ body {
 .enlace-menu:hover {
   color: var(--color-principal-oscuro);
   text-decoration: underline;
+}
+
+.icono {
+  margin-right: 8px;
+  vertical-align: middle;
+  color: var(--color-principal);
 }
 
 @media (max-width: 768px) {
