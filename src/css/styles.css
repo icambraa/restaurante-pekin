@@ -294,7 +294,6 @@ body {
   justify-content: center;
 }
 
-
 .tarjeta-plato {
   width: 220px;
   background-color: var(--color-blanco);
@@ -459,5 +458,20 @@ body {
       margin-top: 12px;
       margin-bottom: 24px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .contenido-principal {
+    padding: 16px 8px;
+  }
+
+  .contenido-principal ul {
+    padding-left: 20px;
+    font-size: 16px;
+  }
+
+  .contenido-principal li {
+    margin-bottom: 8px;
   }
 }
