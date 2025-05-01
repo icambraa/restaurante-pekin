@@ -68,9 +68,12 @@ body {
   }
 }
 
+/* ============================= */
+/*             HOME              */
+/* ============================= */
+
 .bienvenida {
   position: relative;
-  height: 100%;
   background: url("../img/restaurante-chino1.png") center;
   background-size: cover;
   display: flex;
@@ -78,24 +81,48 @@ body {
   justify-content: center;
   text-align: center;
   height: 100vh;
+  clip-path: polygon(100% 0, 100% 92%, 50% 100%, 0 92%, 0 0);
+  margin-top: -1px; /* No se por qué pero al hacer clip-path me aparece un borde blacno, por eso lo oculto con margin-top */
+  background-attachment: fixed;
 }
 
-/* ============================= */
-/*             HOME              */
-/* ============================= */
+.flecha-centro {
+  position: absolute;
+  bottom: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  svg {
+    animation: saltar 1.5s ease-in-out infinite;
+    opacity: 0.8;
+  }
+}
+
+@keyframes saltar {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .contenido-bienvenida {
   color: var(--color-blanco);
   padding: 32px;
+  animation: fadeInUp 0.5s ease-in-out;
 
   h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 36px;
+    margin-bottom: 18px;
   }
 
   p {
-    font-size: 19.2px;
-    margin-bottom: 24px;
+    font-size: 20px;
+    margin-bottom: 35px;
   }
 }
 
@@ -104,12 +131,24 @@ body {
   color: var(--color-blanco);
   padding: 12px 24px;
   text-decoration: none;
-  border-radius: 3px;
+  border-radius: 6px;
   font-weight: bold;
+  font-size: 18px;
 
   &:hover {
     background-color: var(--color-principal-oscuro);
     transition: background-color 0.1s ease-in-out;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -132,6 +171,13 @@ body {
   align-items: center;
   margin-bottom: 48px;
   gap: 32px;
+}
+
+.imagen-sobre-nosotros {
+  clip-path: polygon(10% 0, 95% 0, 95% 100%, 10% 100%, 0% 50%);
+}
+.imagen-especialidad {
+  clip-path: polygon(90% 0, 5% 0, 5% 100%, 90% 100%, 100% 50%);
 }
 
 .imagen-sobre-nosotros,
@@ -303,6 +349,8 @@ body {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   min-height: 450px;
+  animation: aparecer 0.6s ease forwards;
+  opacity: 0;
 
   &:hover {
     transform: scale(1.01);
@@ -315,6 +363,27 @@ body {
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+  }
+}
+
+.lista-platos-flex {
+  .tarjeta-plato:nth-child(1) { animation-delay: 0.1s; }
+  .tarjeta-plato:nth-child(2) { animation-delay: 0.2s; }
+  .tarjeta-plato:nth-child(3) { animation-delay: 0.3s; }
+  .tarjeta-plato:nth-child(4) { animation-delay: 0.4s; }
+  .tarjeta-plato:nth-child(5) { animation-delay: 0.5s; }
+  .tarjeta-plato:nth-child(6) { animation-delay: 0.6s; }
+  .tarjeta-plato:nth-child(7) { animation-delay: 0.7s; }
+  .tarjeta-plato:nth-child(8) { animation-delay: 0.8s; }
+  .tarjeta-plato:nth-child(9) { animation-delay: 0.9s; }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -348,6 +417,7 @@ body {
     }
   }
 }
+
 
 /* ============================= */
 /*    DETALLES DE LOS PLATOS     */
