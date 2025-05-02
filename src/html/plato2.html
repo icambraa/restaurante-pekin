@@ -7,11 +7,21 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img src="../img/restaurante-logo.png" class="imagen-logo" alt="Restaurante Pekin logo" />
+            <img
+              src="../img/restaurante-logo.png?width=320"
+              srcset="../img/restaurante-logo.png?width=640 2x"
+              width="160"
+              height="64"
+              class="imagen-logo"
+              alt="Restaurante logo"
+            />
           </a>
         </div>
         <nav class="navbar">
@@ -23,11 +33,39 @@
       </div>
     </header>
 
-    <main class="contenido-principal">
+    <main id="contenido-principal" class="contenido-principal">
+      <div class="decoracion-lateral izquierda">北京中國餐廳北京中國</div>
+      <div class="decoracion-lateral derecha">北京中國餐廳北京中國</div>
       <h2 class="titulo-seccion">- Ramen -</h2>
 
       <div class="detalle-plato">
-        <img src="../img/ramen.png" class="imagen-detalle" alt="Ramen Tradicional" />
+        <picture class="imagen-detalle">
+          <source
+            srcset="../img/ramen.png?as=avif&width=800"
+            media="(min-width:601px)"
+            type="image/avif"
+          />
+          <source
+            srcset="../img/ramen.png?as=webp&width=800"
+            media="(min-width:601px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../img/ramen-vertical.png?as=avif&width=500"
+            media="(max-width:600px)"
+            type="image/avif"
+          />
+          <source
+            srcset="../img/ramen-vertical.png?as=webp&width=500"
+            media="(max-width:600px)"
+            type="image/webp"
+          />
+          <img
+            class="imagen-detalle"
+            src="../img/ramen.png?width=800"
+            alt="Ramen Tradicional"
+          />
+        </picture>
 
         <div class="texto-detalle">
           <p>
@@ -56,9 +94,41 @@
         </div>
 
         <div class="imagenes-detalle">
-          <img src="../img/ramen1.png" alt="Ramen Tradicional 1" />
-          <img src="../img/ramen2.png" alt="Ramen Tradicional 2" />
-          <img src="../img/ramen3.png" alt="Ramen Tradicional 3" />
+          <picture>
+            <source
+              srcset="../img/ramen1.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/ramen1.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/ramen1.png?width=300" alt="Ramen Tradicional 1" />
+          </picture>
+
+          <picture>
+            <source
+              srcset="../img/ramen2.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/ramen2.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/ramen2.png?width=300" alt="Ramen Tradicional 2" />
+          </picture>
+
+          <picture>
+            <source
+              srcset="../img/ramen3.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/ramen3.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/ramen3.png?width=300" alt="Ramen Tradicional 3" />
+          </picture>
         </div>
 
         <div class="video-detalle">

@@ -7,16 +7,22 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img
-              src="../img/restaurante-logo.png"
-              class="imagen-logo"
-              alt="Logo del restaurante"
-            />
-          </a>
+          <img
+            src="../img/restaurante-logo.png?width=320"
+            srcset="../img/restaurante-logo.png?width=640 2x"
+            width="160"
+            height="64"
+            class="imagen-logo"
+            alt="Restaurante logo"
+          />
+        </a>
         </div>
         <nav class="navbar">
           <ul>
@@ -34,17 +40,11 @@
         <a href="menu.html" class="boton-bienvenida">Ver Menú</a>
       </div>
       <a href="#quienes-somos" class="flecha-centro">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="60"
-          height="60"
-          viewBox="0 0 24 24"
-          fill="none"
-        >
+        <svg width="60" height="60" viewBox="0 0 24 24" fill="none">
           <path
             d="M6 9L12 15L18 9"
             stroke="#ffffff"
-            stroke-width="1.5"
+            stroke-width="2.5"
             stroke-linecap="round"
             stroke-linejoin="round"
           />
@@ -52,7 +52,7 @@
       </a>
     </section>
 
-    <main class="contenido-principal">
+    <main id="contenido-principal" class="contenido-principal">
       <div class="decoracion-lateral izquierda">北京中國餐廳北京中國</div>
       <div class="decoracion-lateral derecha">北京中國餐廳北京中國</div>
       <section id="quienes-somos" class="quienes-somos">
@@ -72,13 +72,39 @@
           </div>
 
           <div class="imagen-sobre-nosotros">
-            <img src="../img/sobre-nosotros.png" alt="Sobre nosotros" />
+            <picture>
+              <source
+                srcset="../img/sobre-nosotros.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/sobre-nosotros.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/sobre-nosotros.png?width=600"
+                alt="Retrato del equipo de Pekín Lleida"
+              />
+            </picture>
           </div>
         </section>
 
         <section class="especialidad">
           <div class="imagen-especialidad">
-            <img src="../img/pato-pekin.png" alt="Pato Pekín" />
+            <picture>
+              <source
+                srcset="../img/pato-pekin.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/pato-pekin.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/pato-pekin.png?width=600"
+                alt="Nuestro famoso Pato Pekín"
+              />
+            </picture>
           </div>
 
           <div class="texto-especialidad">
@@ -117,7 +143,32 @@
         </p>
 
         <div class="imagen-ubicacion">
-          <img src="../img/lleida.png" alt="Ciudad de Lleida" />
+          <picture>
+            <source
+              media="(max-width:600px)"
+              srcset="../img/lleida-vertical.png?as=avif&width=500"
+              type="image/avif"
+            />
+            <source
+              media="(max-width:600px)"
+              srcset="../img/lleida-vertical.png?as=webp&width=500"
+              type="image/webp"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="../img/lleida-horizontal.png?as=avif&width=800"
+              type="image/avif"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="../img/lleida-horizontal.png?as=webp&width=800"
+              type="image/webp"
+            />
+            <img
+              src="../img/lleida-horizontal.png?width=800"
+              alt="Panorámica del río Segre y la Seu Vella"
+            />
+          </picture>
         </div>
       </section>
 

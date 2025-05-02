@@ -68,6 +68,30 @@ body {
   }
 }
 
+.saltar-al-contenido {
+  padding: 4px 8px;
+  background: var(--color-negro);
+  background-clip: border-box;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px #000000;
+  position: absolute;
+  top: auto;
+  width: 1px;
+  height: 1px;  
+  overflow: hidden;
+}
+
+.saltar-al-contenido:focus {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+}
+
 /* ============================= */
 /*             HOME              */
 /* ============================= */
@@ -113,7 +137,7 @@ body {
 .contenido-bienvenida {
   color: var(--color-blanco);
   padding: 32px;
-  animation: fadeInUp 0.5s ease-in-out;
+  animation: aparecer-hero 0.5s ease-in-out;
 
   h2 {
     font-size: 36px;
@@ -141,7 +165,7 @@ body {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes aparecer-hero {
   0% {
     opacity: 0;
     transform: translateY(20px);
@@ -332,7 +356,6 @@ body {
   }
 }
 
-
 .decoracion-lateral {
   position: absolute;
   top: 0;
@@ -346,13 +369,17 @@ body {
 }
 
 .decoracion-lateral.izquierda {
-  left: -35%;
+  left: -20%;
 }
 
 .decoracion-lateral.derecha {
-  right: -35%;
+  right: -20%;
 }
-
+@media (max-width: 1399px) {
+  .decoracion-lateral {
+    display: none;
+  }
+}
 
 /* ============================= */
 /*             MENU              */
@@ -392,15 +419,33 @@ body {
 }
 
 .lista-platos-flex {
-  .tarjeta-plato:nth-child(1) { animation-delay: 0.1s; }
-  .tarjeta-plato:nth-child(2) { animation-delay: 0.2s; }
-  .tarjeta-plato:nth-child(3) { animation-delay: 0.3s; }
-  .tarjeta-plato:nth-child(4) { animation-delay: 0.4s; }
-  .tarjeta-plato:nth-child(5) { animation-delay: 0.5s; }
-  .tarjeta-plato:nth-child(6) { animation-delay: 0.6s; }
-  .tarjeta-plato:nth-child(7) { animation-delay: 0.7s; }
-  .tarjeta-plato:nth-child(8) { animation-delay: 0.8s; }
-  .tarjeta-plato:nth-child(9) { animation-delay: 0.9s; }
+  .tarjeta-plato:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .tarjeta-plato:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .tarjeta-plato:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .tarjeta-plato:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .tarjeta-plato:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .tarjeta-plato:nth-child(6) {
+    animation-delay: 0.6s;
+  }
+  .tarjeta-plato:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .tarjeta-plato:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  .tarjeta-plato:nth-child(9) {
+    animation-delay: 0.9s;
+  }
 }
 
 @keyframes aparecer {
@@ -442,7 +487,6 @@ body {
     }
   }
 }
-
 
 /* ============================= */
 /*    DETALLES DE LOS PLATOS     */
@@ -506,8 +550,15 @@ body {
   gap: 16px;
   margin-top: 24px;
 
-  img {
+  picture {
     width: 30%;
+    min-width: 200px;
+  }
+
+  picture img {
+    width: 100%;
+    height: auto;
+    display: block;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
@@ -531,7 +582,7 @@ body {
     align-items: center;
   }
 
-  .imagenes-detalle img {
+  picture {
     width: 90%;
     max-width: 400px;
   }
