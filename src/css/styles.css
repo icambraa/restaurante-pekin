@@ -82,6 +82,7 @@ body {
   width: 1px;
   height: 1px;
   overflow: hidden;
+  left: -200px;
 }
 
 .saltar-al-contenido:focus {
