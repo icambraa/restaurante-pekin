@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Pekin en Lleida</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../img/favicon-32x32.png" />
   </head>
   <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img
-              src="../img/restaurante-logo.png"
-              class="imagen-logo"
-              alt="Logo del restaurante"
-            />
+            <picture>
+              <source
+                srcset="../img/restaurante-logo.png?as=avif&width=320"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/restaurante-logo.png?as=webp&width=320"
+                type="image/webp"
+              />
+              <img
+                src="../img/restaurante-logo.png?width=320"
+                class="imagen-logo"
+                alt="Restaurante logo"
+              />
+            </picture>
           </a>
         </div>
         <nav class="navbar">
@@ -33,10 +47,29 @@
         <p>¡Descubra la auténtica gastronomía oriental!</p>
         <a href="menu.html" class="boton-bienvenida">Ver Menú</a>
       </div>
+      <a href="#quienes-somos" class="flecha-centro">
+        <svg
+          width="80"
+          height="80"
+          viewBox="0 0 60 60"
+          class="flecha-personalizada"
+        >
+          <path
+            d="M15 20 L30 40 L45 20"
+            stroke="white"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
     </section>
 
-    <main class="contenido-principal">
-      <section class="quienes-somos">
+    <main id="contenido-principal" class="contenido-principal">
+      <div class="decoracion-lateral izquierda">北京中國餐廳北京中國</div>
+      <div class="decoracion-lateral derecha">北京中國餐廳北京中國</div>
+      <section id="quienes-somos" class="quienes-somos">
         <h2 class="titulo-seccion">- ¿Quiénes somos? -</h2>
 
         <section class="sobre-nosotros">
@@ -53,13 +86,39 @@
           </div>
 
           <div class="imagen-sobre-nosotros">
-            <img src="../img/sobre-nosotros.png" alt="Sobre nosotros" />
+            <picture>
+              <source
+                srcset="../img/sobre-nosotros.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/sobre-nosotros.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/sobre-nosotros.png?width=600"
+                alt="Retrato del equipo de Pekín Lleida"
+              />
+            </picture>
           </div>
         </section>
 
         <section class="especialidad">
           <div class="imagen-especialidad">
-            <img src="../img/pato-pekin.png" alt="Pato Pekín" />
+            <picture>
+              <source
+                srcset="../img/pato-pekin.png?as=avif&width=600"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/pato-pekin.png?as=webp&width=600"
+                type="image/webp"
+              />
+              <img
+                src="../img/pato-pekin.png?width=600"
+                alt="Nuestro famoso Pato Pekín"
+              />
+            </picture>
           </div>
 
           <div class="texto-especialidad">
@@ -98,7 +157,44 @@
         </p>
 
         <div class="imagen-ubicacion">
-          <img src="../img/lleida.png" alt="Ciudad de Lleida" />
+          <picture>
+            <source
+              media="(max-width:600px)"
+              srcset="
+                ../img/lleida-vertical.png?as=avif&width=500  1x,
+                ../img/lleida-vertical.png?as=avif&width=1000 2x
+              "
+              type="image/avif"
+            />
+            <source
+              media="(max-width:600px)"
+              srcset="
+                ../img/lleida-vertical.png?as=webp&width=500  1x,
+                ../img/lleida-vertical.png?as=webp&width=1000 2x
+              "
+              type="image/webp"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="
+                ../img/lleida-horizontal.png?as=avif&width=800  1x,
+                ../img/lleida-horizontal.png?as=avif&width=1600 2x
+              "
+              type="image/avif"
+            />
+            <source
+              media="(min-width:601px)"
+              srcset="
+                ../img/lleida-horizontal.png?as=webp&width=800  1x,
+                ../img/lleida-horizontal.png?as=webp&width=1600 2x
+              "
+              type="image/webp"
+            />
+            <img
+              src="../img/lleida-horizontal.png?width=800"
+              alt="Panorámica del río Segre y la Seu Vella"
+            />
+          </picture>
         </div>
       </section>
 

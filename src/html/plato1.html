@@ -5,13 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pato Pekín - Restaurante Pekin</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../img/favicon-32x32.png" />
   </head>
   <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img src="../img/restaurante-logo.png" class="imagen-logo" alt="Restaurante Pekin logo" />
+            <picture>
+              <source
+                srcset="../img/restaurante-logo.png?as=avif&width=320"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/restaurante-logo.png?as=webp&width=320"
+                type="image/webp"
+              />
+              <img
+                src="../img/restaurante-logo.png?width=320"
+                class="imagen-logo"
+                alt="Restaurante logo"
+              />
+            </picture>
           </a>
         </div>
         <nav class="navbar">
@@ -23,11 +41,40 @@
       </div>
     </header>
 
-    <main class="contenido-principal">
+    <main id="contenido-principal" class="contenido-principal">
+      <div class="decoracion-lateral izquierda">北京中國餐廳北京中國</div>
+      <div class="decoracion-lateral derecha">北京中國餐廳北京中國</div>
       <h2 class="titulo-seccion">- Pato Pekín -</h2>
 
       <div class="detalle-plato">
-        <img src="../img/pato-pekin.png" class="imagen-detalle" alt="Pato Pekín" />
+        <picture class="imagen-detalle">
+          <source
+            srcset="../img/pato-pekin.png?as=avif&width=800"
+            media="(min-width:601px)"
+            type="image/avif"
+          />
+          <source
+            srcset="../img/pato-pekin.png?as=webp&width=800"
+            media="(min-width:601px)"
+            type="image/webp"
+          />
+          <source
+            srcset="../img/pato-pekin-vertical.png?as=avif&width=500"
+            media="(max-width:600px)"
+            type="image/avif"
+          />
+          <source
+            srcset="../img/pato-pekin-vertical.png?as=webp&width=500"
+            media="(max-width:600px)"
+            type="image/webp"
+          />
+
+          <img
+            class="imagen-detalle"
+            src="../img/pato-pekin.png?width=800"
+            alt="Pato Pekín"
+          />
+        </picture>
 
         <div class="texto-detalle">
           <p>
@@ -55,9 +102,39 @@
         </div>
 
         <div class="imagenes-detalle">
-          <img src="../img/pato1.png" alt="Pato Pekín 1" />
-          <img src="../img/pato2.png" alt="Pato Pekín 2" />
-          <img src="../img/pato3.png" alt="Pato Pekín 3" />
+          <picture>
+            <source
+              srcset="../img/pato1.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/pato1.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/pato1.png?width=300" alt="Pato Pekín 1" />
+          </picture>
+          <picture>
+            <source
+              srcset="../img/pato2.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/pato2.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/pato2.png?width=300" alt="Pato Pekín 2" />
+          </picture>
+          <picture>
+            <source
+              srcset="../img/pato3.png?as=avif&width=300"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/pato3.png?as=webp&width=300"
+              type="image/webp"
+            />
+            <img src="../img/pato3.png?width=300" alt="Pato Pekín 3" />
+          </picture>
         </div>
 
         <div class="video-detalle">

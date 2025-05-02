@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menú - Restaurante Pekin en Lleida</title>
     <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="icon" type="image/png" href="../img/favicon-32x32.png" />
   </head>
   <body>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img
-              src="../img/restaurante-logo.png"
-              class="imagen-logo"
-              alt="Logo del restaurante"
-            />
+            <picture>
+              <source
+                srcset="../img/restaurante-logo.png?as=avif&width=320"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/restaurante-logo.png?as=webp&width=320"
+                type="image/webp"
+              />
+              <img
+                src="../img/restaurante-logo.png?width=320"
+                class="imagen-logo"
+                alt="Restaurante logo"
+              />
+            </picture>
           </a>
         </div>
         <nav class="navbar">
@@ -27,11 +41,31 @@
       </div>
     </header>
 
-    <main class="contenido-principal">
+    <main id="contenido-principal" class="contenido-principal">
+      <div class="decoracion-lateral izquierda">北京中國餐廳北京</div>
+      <div class="decoracion-lateral derecha">北京中國餐廳北京</div>
       <h2 class="titulo-seccion">- Nuestro menú -</h2>
       <div class="lista-platos-flex">
         <article class="tarjeta-plato">
-          <img src="../img/pato-pekin.png" alt="Pato Pekín" />
+          <picture>
+            <source
+              srcset="../img/pato-pekin.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/pato-pekin.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/pato-pekin.png?width=480"
+              srcset="
+                ../img/pato-pekin.png?width=480 480w,
+                ../img/pato-pekin.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Pato Pekín"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Pato Pekín</h3>
             <p>
@@ -43,7 +77,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/ramen.png" alt="Ramen Tradicional" />
+          <picture>
+            <source
+              srcset="../img/ramen.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/ramen.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/ramen.png?width=480"
+              srcset="
+                ../img/ramen.png?width=480 480w,
+                ../img/ramen.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Ramen Tradicional"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Ramen Tradicional</h3>
             <p>
@@ -55,7 +107,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/gyoza.png" alt="Gyozas" />
+          <picture>
+            <source
+              srcset="../img/gyoza.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/gyoza.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/gyoza.png?width=480"
+              srcset="
+                ../img/gyoza.png?width=480 480w,
+                ../img/gyoza.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Gyozas"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Gyozas</h3>
             <p>
@@ -67,7 +137,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/tempura.png" alt="Tempura" />
+          <picture>
+            <source
+              srcset="../img/tempura.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/tempura.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/tempura.png?width=480"
+              srcset="
+                ../img/tempura.png?width=480 480w,
+                ../img/tempura.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Tempura"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Tempura</h3>
             <p>
@@ -79,7 +167,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/kung-pao.png" alt="Pollo Kung Pao" />
+          <picture>
+            <source
+              srcset="../img/kung-pao.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/kung-pao.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/kung-pao.png?width=480"
+              srcset="
+                ../img/kung-pao.png?width=480 480w,
+                ../img/kung-pao.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Pollo Kung Pao"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Pollo Kung Pao</h3>
             <p>
@@ -91,7 +197,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/langostinos.png" alt="Langostinos" />
+          <picture>
+            <source
+              srcset="../img/langostinos.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/langostinos.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/langostinos.png?width=480"
+              srcset="
+                ../img/langostinos.png?width=480 480w,
+                ../img/langostinos.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Langostinos con ajo"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Langostinos con ajo</h3>
             <p>
@@ -103,7 +227,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/dim-sum.png" alt="Dim Sum" />
+          <picture>
+            <source
+              srcset="../img/dim-sum.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/dim-sum.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/dim-sum.png?width=480"
+              srcset="
+                ../img/dim-sum.png?width=480 480w,
+                ../img/dim-sum.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Dim Sum variado"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Dim Sum variado</h3>
             <p>
@@ -115,7 +257,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/arroz-yangzhou.png" alt="Arroz Yangzhou" />
+          <picture>
+            <source
+              srcset="../img/arroz-yangzhou.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/arroz-yangzhou.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/arroz-yangzhou.png?width=480"
+              srcset="
+                ../img/arroz-yangzhou.png?width=480 480w,
+                ../img/arroz-yangzhou.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Arroz frito Yangzhou"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Arroz frito Yangzhou</h3>
             <p>
@@ -127,7 +287,25 @@
         </article>
 
         <article class="tarjeta-plato">
-          <img src="../img/sopa-agripicante.png" alt="sopa-agripicante" />
+          <picture>
+            <source
+              srcset="../img/sopa-agripicante.png?as=avif&width=480"
+              type="image/avif"
+            />
+            <source
+              srcset="../img/sopa-agripicante.png?as=webp&width=480"
+              type="image/webp"
+            />
+            <img
+              src="../img/sopa-agripicante.png?width=480"
+              srcset="
+                ../img/sopa-agripicante.png?width=480 480w,
+                ../img/sopa-agripicante.png?width=768 768w
+              "
+              sizes="(max-width: 600px) 270px, 300px"
+              alt="Sopa agripicante"
+            />
+          </picture>
           <div class="contenido-plato">
             <h3>Sopa agripicante</h3>
             <p>
