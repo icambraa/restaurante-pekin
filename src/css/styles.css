@@ -80,7 +80,7 @@ body {
   position: absolute;
   top: auto;
   width: 1px;
-  height: 1px;  
+  height: 1px;
   overflow: hidden;
 }
 
@@ -113,9 +113,7 @@ body {
 .flecha-centro {
   position: absolute;
   bottom: 120px;
-  left: 50%;
-  transform: translateX(-50%);
-
+  
   svg {
     animation: saltar 1.5s ease-in-out infinite;
     opacity: 0.8;
@@ -137,7 +135,7 @@ body {
 .contenido-bienvenida {
   color: var(--color-blanco);
   padding: 32px;
-  animation: aparecer-hero 0.5s ease-in-out;
+  animation: aparecer-hero 0.5s ease forwards;
 
   h2 {
     font-size: 36px;
@@ -393,20 +391,20 @@ body {
 }
 
 .tarjeta-plato {
-  width: 220px;
-  background-color: var(--color-blanco);
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--color-negro);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   min-height: 450px;
-  animation: aparecer 0.6s ease forwards;
+  animation: aparecer-plato 0.5s ease forwards;
   opacity: 0;
+  max-width: 300px;
 
-  &:hover {
-    transform: scale(1.01);
-    transition: transform 0.1s ease-in-out;
+  picture {
+    width: 100%;
+    display: block;
   }
 
   img {
@@ -415,6 +413,12 @@ body {
     object-fit: cover;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tarjeta-plato {
+    max-width: 270px;
   }
 }
 
@@ -448,12 +452,14 @@ body {
   }
 }
 
-@keyframes aparecer {
+@keyframes aparecer-plato {
   0% {
     opacity: 0;
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
