@@ -342,6 +342,7 @@ body {
     order: 2;
     display: flex;
     justify-content: center;
+    clip-path: none;
 
     img {
       width: 100%;
