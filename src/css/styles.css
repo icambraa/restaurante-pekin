@@ -372,7 +372,7 @@ body {
 .decoracion-lateral.derecha {
   right: -15%;
 }
-@media (max-width: 1399px) {
+@media (max-width: 1400px) {
   .decoracion-lateral {
     display: none;
   }
