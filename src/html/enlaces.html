@@ -7,19 +7,28 @@
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body class="pagina-enlaces">
-    <a href="#contenido-principal" class="saltar-al-contenido">Saltar al contenido</a>
+    <a href="#contenido-principal" class="saltar-al-contenido"
+      >Saltar al contenido</a
+    >
     <header class="cabecera">
       <div class="contenedor">
         <div class="logotipo">
           <a href="index.html">
-            <img
-              src="../img/restaurante-logo.png?width=320"
-              srcset="../img/restaurante-logo.png?width=640 2x"
-              width="160"
-              height="64"
-              class="imagen-logo"
-              alt="Restaurante logo"
-            />
+            <picture>
+              <source
+                srcset="../img/restaurante-logo.png?as=avif&width=320"
+                type="image/avif"
+              />
+              <source
+                srcset="../img/restaurante-logo.png?as=webp&width=320"
+                type="image/webp"
+              />
+              <img
+                src="../img/restaurante-logo.png?width=320"
+                class="imagen-logo"
+                alt="Restaurante logo"
+              />
+            </picture>
           </a>
         </div>
         <nav class="navbar">
