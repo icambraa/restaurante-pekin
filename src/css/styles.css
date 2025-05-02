@@ -76,7 +76,7 @@ body {
   color: var(--color-blanco);
   text-decoration: none;
   border-radius: 4px;
-  border: 1px var(--color-negro);
+  border: 1px solid var(--color-negro);
   position: absolute;
   top: auto;
   width: 1px;
