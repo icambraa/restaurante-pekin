@@ -117,7 +117,10 @@ body {
   background-attachment: fixed;
 }
 
-
+.icono {
+  vertical-align: middle;
+  margin-right: 8px;
+}
 
 .flecha-centro {
   position: absolute;
