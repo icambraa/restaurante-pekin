@@ -117,18 +117,7 @@ body {
   background-attachment: fixed;
 }
 
-@media (max-width: 768px) {
-  .bienvenida {
-    background-attachment: scroll;
-    clip-path: none;
-  }
 
-  .contenido-bienvenida {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}
 
 .flecha-centro {
   position: absolute;
