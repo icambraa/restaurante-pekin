@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Restaurante Pekin en Lleida</title>
+    <link
+      rel="preload"
+      as="image"
+      href="../img/restaurante-chino1.webp"
+      type="image/webp"
+    />
     <link rel="stylesheet" href="../css/styles.css" />
     <link rel="icon" type="image/webp" href="../img/favicon-32x32.webp" />
     <link
@@ -13,6 +19,7 @@
       onload="this.media='all'"
     />
   </head>
+
   <body>
     <a href="#contenido-principal" class="saltar-al-contenido"
       >Saltar al contenido</a
@@ -204,5 +211,10 @@
       <p>Icambra - P1 Desarrollo de una web HTML Y CSS 1</p>
     </footer>
     <script src="../js/app.js" defer></script>
+    <script>
+      window.addEventListener("load", () => {
+        document.documentElement.classList.add("animaciones-habilitadas");
+      });
+    </script>
   </body>
 </html>
