@@ -117,8 +117,10 @@ body {
   background-attachment: fixed;
 }
 
-html:not(.animaciones-habilitadas) .contenido-bienvenida {
-  animation: none !important;
+@media (max-width: 768px) {
+  .bienvenida {
+    background-attachment: scroll;
+  }
 }
 
 .flecha-centro {
